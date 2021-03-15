@@ -1,12 +1,12 @@
-console.log('Hello World');
+const express = require('express');
+const app = express();
 
-person = 'chintan';
-age = 23;
+app.get('/', (request, response) => {
 
-character = {
-    name: person,
-    age: age,
-}
+    // response.json({msg: 'received1'});
+    response.end();
+})
 
-console.log(person + ' '+ age);
-console.log(character);
+app.listen(3333, () => {
+    console.log('server is on and working on port 3333');
+})
